@@ -11,7 +11,14 @@
                 <li>{{result.age}} years old</li>
             </ul>
         </div>
+        <div>
+            
         <img src='uploads/{{result.uploadFile}}'>
+        <form action="delete.php" method='post'>
+            <input type='text' name='delete' value='uploads/{{result.uploadFile}}' hidden>
+            <button>Delete profil</button>
+        </form>
+        </div>
     </section>
     {% endif %}
 {% endblock %}
