@@ -1,0 +1,17 @@
+{
+    "name": "nlero/advancedfile",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicolas Leroux",
+            "email": "nicolas.leroux.begles@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.7"
+    }
+}

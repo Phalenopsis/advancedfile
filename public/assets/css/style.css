@@ -1,0 +1,35 @@
+body {
+  margin: 1vh 30vw;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+input[type="text"] {
+  width: 20rem;
+}
+input[type="file"] {
+  width: auto;
+}
+button {
+  width: 5rem;
+}
+img {
+  width: 100px;
+}
+.profile {
+  display: flex;
+  justify-content: space-around;
+}
+.profile > div > ul {
+  list-style: none;
+}

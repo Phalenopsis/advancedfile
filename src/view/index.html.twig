@@ -1,0 +1,46 @@
+{% extends 'layout.html.twig' %}
+
+{% block result %}
+    {% if result.firstname is defined %}
+    <h1>Profile</h1>
+    <section class='profile'>
+        <div>
+            <ul>
+                <li>{{result.firstname}}</li> 
+                <li>{{result.lastname}}</li>
+                <li>{{result.age}} years old</li>
+            </ul>
+        </div>
+        <img src='uploads/{{result.uploadFile}}'>
+    </section>
+    {% endif %}
+{% endblock %}
+
+{% block form %}
+    {% if result.firstname is not defined %}
+        <section>
+            <h1>SpringfieldWildMeet</h1>
+            <form action="" method="post" enctype="multipart/form-data">
+                <label for="firstname">Firstname</label>
+                <span class="error">{{ errors.firstname }}</span>
+                <input type="text" name="firstname" id="firstname">
+
+                <label for="lastname">Lastname</label>
+                <span class="error">{{ errors.lastname }}</span>
+                <input type="text" name="lastname" id="lastname">
+
+                <label for="age">Age</label>
+                <span class="error">{{ errors.age }}</span>
+                <input type="number" name="age" id="age">
+
+                <label for="avatar">Upload a profile image</label>
+                {% for error in errors.avatar %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+                <input type="file" name="avatar" id="avatar">
+
+                <button name="send">Send</button>
+            </form>
+        </section>
+    {% endif %}
+{% endblock %}
